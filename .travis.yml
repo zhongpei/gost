@@ -1,5 +1,9 @@
 language: go
-
+sudo: false
 go:
-  1.6
-  1.7
+  - 1.x
+
+install: true
+script:
+  - go test -race -v
+  - cd cmd/gost && go build
